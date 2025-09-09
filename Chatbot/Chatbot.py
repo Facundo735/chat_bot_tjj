@@ -2,7 +2,7 @@ import streamlit as st
 import groq  # API client (asegurate de tener la librería instalada)
 
 # Configuración de la página (mejor al inicio)
-st.set_page_config(page_title="Pagina para el chatbot", page_icon="🫡")
+st.set_page_config(page_title="Asistente chatbot", page_icon="🫡")
 
 MODELOS = [
     "llama-3.1-8b-instant",
@@ -87,7 +87,7 @@ def ejecutar_app():
     modelo = mostrar_sidebar()
     cliente = crear_cliente_groq()
 
-    st.title("Pagina para el chatbot")
+    st.title("Asistencia personal con chatbot")
 
     # Mostrar historial previo
     mostrar_historial()
@@ -109,5 +109,6 @@ def ejecutar_app():
 
 if __name__ == "__main__":
     ejecutar_app()
+
 
 
