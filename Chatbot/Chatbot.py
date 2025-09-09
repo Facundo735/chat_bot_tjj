@@ -51,8 +51,8 @@ def mostrar_historial ():
             st.markdown(mensaje["content"]) #que envia
 
 #Obtener mensaje de usuario
-def obtener_mensaje ():
-    return st.chat_input("Envia un mensaje")
+def obtener_mensaje():
+    return st.chat_input("Envia un mensaje", key="chat_input")
 
 #Agregar los mensajes al estado
 
@@ -89,6 +89,7 @@ def ejecutar_app():
 #ejecutar la api
 if __name__ == "__main__": #si este archivo es el principal entonces ejecuta
     ejecutar_app()
+
 
 
 
