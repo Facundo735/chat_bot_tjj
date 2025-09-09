@@ -4,7 +4,13 @@ import groq  # API client (asegurate de tener la librería instalada)
 # Configuración de la página (mejor al inicio)
 st.set_page_config(page_title="Pagina para el chatbot", page_icon="🫡")
 
-MODELOS = ['llama3-8b-8192', 'llama3-70b-8192', 'mixtral-8x7b-32768']
+MODELOS = [
+    "llama-3.1-8b-instant",
+    "llama-3.3-70b-versatile",
+    "meta-llama/llama-guard-4-12b",
+    "openai/gpt-oss-20b",
+    "openai/gpt-oss-120b"
+]
 
 
 def crear_cliente_groq():
@@ -103,4 +109,5 @@ def ejecutar_app():
 
 if __name__ == "__main__":
     ejecutar_app()
+
 
