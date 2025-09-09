@@ -30,10 +30,16 @@ def crear_cliente_groq():
 
 #INICIALIZAR EL ESTADO DE LOS MENSAJES
 
-def inicializacion_estado_chat ():
+def inicializacion_estado_chat():
+    if "mensajes" not in st.session_state:
+        st.session_state["mensajes"] = []   # lista vacía para iniciar el chat
+    
+    if "usuario" not in st.session_state:
+        st.session_state["usuario"] = None  # o "" si preferís string vacío
+    
+    if "bot_respuestas" not in st.session_state:
+        st.session_state["bot_respuestas"] = []
 
-    if "mensajes" not in st.session_state.mensajes:
-        st.session_state.mensajes = [] #lista
 #muestra mensajes previos
 
 
@@ -83,6 +89,7 @@ def ejecutar_app():
 #ejecutar la api
 if __name__ == "__main__": #si este archivo es el principal entonces ejecuta
     ejecutar_app()
+
 
 
 
